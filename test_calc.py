@@ -23,7 +23,7 @@ class CalcTest(TestCase):
         self.assertEqual(5, self.calc.multiply(1, 5))
 
     def test_multiply2(self):
-        self.assertEqual(5, self.calc.multiply(1, 0))
+        self.assertEqual(0, self.calc.multiply(1, 0))
 
     def test_divide(self):
         self.assertEqual(float(12 / 8), self.calc.divide(12, 8))
