@@ -4,25 +4,34 @@ class Calculator:
 
     def add(self, x, y):
         """This function adds two numbers"""
-
-        raise NotImplementedError
+        return x + y
 
     def subtract(self, x, y):
         """This function subtracts two numbers"""
-
-        raise NotImplementedError
+        return x - y
 
     def multiply(self, x, y):
         """This function multiplies two numbers"""
-
-        raise NotImplementedError
+        if x == 1:
+            return y
+        elif y == 1:
+            return x
+        else:
+            return x * y
 
     def divide(self, x, y):
         """This function divides two numbers"""
-
-        raise NotImplementedError
+        if y == 1:
+            return x
+        elif y == 0:
+            raise ZeroDivisionError
+        else:
+            return x / y
 
     def evaluate(self, expression):
         """This function evaluate expression"""
-
-        raise NotImplementedError
+        try:
+            result = eval(expression)
+        except:
+            raise SyntaxError
+        return result
